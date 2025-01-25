@@ -1,11 +1,13 @@
+using System.Numerics;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class gameplayCamera : MonoBehaviour
 {
 
     public bool musicGameComplete = false;
 
-    public bool moveComplete = false;
+    public bool moveEnabled = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,18 +19,24 @@ public class gameplayCamera : MonoBehaviour
     void Update()
     {
         // When minigame is complete pan the camera to x=22.5
-
+        if(moveEnabled) {
+            moveCamera();
+        }
     }
 
     public void moveCamera()
     {
-        Vector3 newPosition = new Vector3();
+        UnityEngine.Vector3 newPosition = new UnityEngine.Vector3();
         newPosition.x = 22.5f;
         newPosition.y = 0;
         newPosition.z = -10f;
 
         float speed = 5f;
 
-        transform.position = Vector3.MoveTowards(transform.position, newPosition, speed*Time.deltaTime);
+        transform.position = UnityEngine.Vector3.MoveTowards(transform.position, newPosition, speed*Time.deltaTime);
+
+        if(UnityEngine.Vector3.Distance(transform.position, newPosition) < 0.01f){
+            moveEnabled = false;
+        }
     }
 }

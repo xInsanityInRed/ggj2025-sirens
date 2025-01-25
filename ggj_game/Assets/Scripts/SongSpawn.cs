@@ -16,6 +16,9 @@ public class SongSpawn : MonoBehaviour
     [SerializeField]
     private Transform[] positions;
 
+    [SerializeField]
+    private GameObject cameraReference;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -62,7 +65,6 @@ public class SongSpawn : MonoBehaviour
     // Check active states
     private void checkActive()
     {
-        bool allComplete = false;
         bool prevNoteComplete = false;
 
         for( int i=0 ; i<noteObjects.Length ; i++) {
@@ -82,6 +84,13 @@ public class SongSpawn : MonoBehaviour
                     }
                 }
             }
+        }
+
+        Note lastNote = noteObjects[noteObjects.Length-1].GetComponent<Note>();
+        if(lastNote.complete) {
+            complete = true;
+            gameplayCamera camera = cameraReference.GetComponent<gameplayCamera>();
+            camera.moveEnabled = true;
         }
     }
 
