@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:ggj_game/Assets/Prefabs.meta
 guid: 42c9ce74b2b9a790bb46b792e7f7bb05
 folderAsset: yes
+========
+guid: f6d92eab1cfdd3c4bafd778ac1bf2e87
+>>>>>>>> main:ggj_game/Assets/Scenes/OptionsScene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
