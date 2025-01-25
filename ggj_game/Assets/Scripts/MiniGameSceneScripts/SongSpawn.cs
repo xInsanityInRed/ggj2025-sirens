@@ -22,6 +22,11 @@ public class SongSpawn : MonoBehaviour
     [SerializeField]
     private GameObject cameraReference;
 
+    public void Initialize(string song)
+    {
+        songNotes = song;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
