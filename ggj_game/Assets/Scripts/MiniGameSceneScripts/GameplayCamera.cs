@@ -2,7 +2,7 @@ using System.Numerics;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class gameplayCamera : MonoBehaviour
+public class GameplayCamera : MonoBehaviour
 {
 
     public bool musicGameComplete = false;

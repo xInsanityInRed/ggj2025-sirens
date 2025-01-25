@@ -89,7 +89,7 @@ public class SongSpawn : MonoBehaviour
         Note lastNote = noteObjects[noteObjects.Length-1].GetComponent<Note>();
         if(lastNote.complete) {
             complete = true;
-            gameplayCamera camera = cameraReference.GetComponent<gameplayCamera>();
+            GameplayCamera camera = cameraReference.GetComponent<GameplayCamera>();
             camera.moveEnabled = true;
         }
     }
