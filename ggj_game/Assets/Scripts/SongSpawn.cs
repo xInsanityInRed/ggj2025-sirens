@@ -43,7 +43,7 @@ public class SongSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       checkActive(); 
     }
 
     private KeyCode getKey(char note)
@@ -70,13 +70,16 @@ public class SongSpawn : MonoBehaviour
 
             // check if note is complete
             if(!noteObject.active) {
-                if(prevNoteComplete) {
-                    noteObject.active = true;
-                }
-            }
-            else {
                 if(noteObject.complete) {
                     prevNoteComplete = true;
+                    continue;
+                }
+                
+                // Debug.Log("Note " + i + " is not active.");
+                else {
+                    if(prevNoteComplete) {
+                        noteObject.active = true;
+                    }
                 }
             }
         }
