@@ -9,6 +9,9 @@ public class SongSpawn : MonoBehaviour
     public bool complete = false;
 
     [SerializeField]
+    private GameObject containerReference;
+
+    [SerializeField]
     private GameObject noteReference;
 
     private GameObject[] noteObjects;
@@ -22,6 +25,9 @@ public class SongSpawn : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Create song container
+        GameObject container = Instantiate(containerReference, transform);
+
         // Create note objects for song
         noteObjects = new GameObject[songNotes.Length];
         Debug.Log("Length: " + songNotes.Length);
@@ -93,8 +99,8 @@ public class SongSpawn : MonoBehaviour
         Note lastNote = noteObjects[noteObjects.Length-1].GetComponent<Note>();
         if(lastNote.complete) {
             complete = true;
-            GameplayCamera camera = cameraReference.GetComponent<GameplayCamera>();
-            camera.moveEnabled = true;
+            // GameplayCamera camera = cameraReference.GetComponent<GameplayCamera>();
+            // camera.moveEnabled = true;
         }
     }
 

@@ -3,15 +3,19 @@
 [LOG] SystemI::init                            : Initialize version=20226 (148250), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD PulseAudio Output'
 [LOG] OutputPulseAudio::registerLib            : Loaded PulseAudio version 17.0.0.
-[LOG] PulseAudio_EnumOutputCallback            : Found output device NAME:alsa_output.pci-0000_05_00.6.HiFi__Speaker__sink DESC:Family 17h/19h/1ah HD Audio Controller Speaker CHANNELS:2 RATE:48000.
-[LOG] PulseAudio_EnumInputCallback             : Found input device NAME:alsa_output.pci-0000_05_00.6.HiFi__Speaker__sink.monitor DESC:Monitor of Family 17h/19h/1ah HD Audio Controller Speaker CHANNELS:2 RATE:48000.
-[LOG] PulseAudio_EnumInputCallback             : Found input device NAME:alsa_input.pci-0000_05_00.6.HiFi__Mic2__source DESC:Family 17h/19h/1ah HD Audio Controller Headphones Stereo Microphone CHANNELS:2 RATE:48000.
-[LOG] PulseAudio_EnumInputCallback             : Found input device NAME:alsa_input.pci-0000_05_00.6.HiFi__Mic1__source DESC:Family 17h/19h/1ah HD Audio Controller Digital Microphone CHANNELS:2 RATE:48000.
+[LOG] PulseAudio_EnumOutputCallback            : Found output device NAME:alsa_output.pci-0000_00_1f.3.iec958-stereo DESC:Built-in Audio Digital Stereo (IEC958) CHANNELS:2 RATE:48000.
+[LOG] PulseAudio_EnumOutputCallback            : Found output device NAME:alsa_output.pci-0000_01_00.1.hdmi-stereo DESC:TU106 High Definition Audio Controller Digital Stereo (HDMI) CHANNELS:2 RATE:48000.
+[LOG] PulseAudio_EnumOutputCallback            : Found output device NAME:alsa_output.usb-Corsair_CORSAIR_VOID_ELITE_Wireless_Gaming_Dongle-00.analog-stereo DESC:CORSAIR VOID ELITE Wireless Gaming Dongle Analog Stereo CHANNELS:2 RATE:48000.
+[LOG] PulseAudio_EnumInputCallback             : Found input device NAME:alsa_output.pci-0000_00_1f.3.iec958-stereo.monitor DESC:Monitor of Built-in Audio Digital Stereo (IEC958) CHANNELS:2 RATE:48000.
+[LOG] PulseAudio_EnumInputCallback             : Found input device NAME:alsa_input.pci-0000_00_1f.3.analog-stereo DESC:Built-in Audio Analog Stereo CHANNELS:2 RATE:48000.
+[LOG] PulseAudio_EnumInputCallback             : Found input device NAME:alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor DESC:Monitor of TU106 High Definition Audio Controller Digital Stereo (HDMI) CHANNELS:2 RATE:48000.
+[LOG] PulseAudio_EnumInputCallback             : Found input device NAME:alsa_output.usb-Corsair_CORSAIR_VOID_ELITE_Wireless_Gaming_Dongle-00.analog-stereo.monitor DESC:Monitor of CORSAIR VOID ELITE Wireless Gaming Dongle Analog Stereo CHANNELS:2 RATE:48000.
+[LOG] PulseAudio_EnumInputCallback             : Found input device NAME:alsa_input.usb-Corsair_CORSAIR_VOID_ELITE_Wireless_Gaming_Dongle-00.mono-fallback DESC:CORSAIR VOID ELITE Wireless Gaming Dongle Mono CHANNELS:1 RATE:48000.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] FMOD_OS_Thread_Callback                  : Cannot set real-time thread priorities due to insufficient privileges
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
 [LOG] FMOD_OS_Thread_Callback                  : Cannot set real-time thread priorities due to insufficient privileges
-[LOG] AsyncManager::init                       : manager 0x5cc43639baf8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x6083f9bd41e8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
