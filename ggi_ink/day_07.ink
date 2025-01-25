@@ -45,4 +45,23 @@ Dialogue here. # child
 = child_04
 Dialogue here. # child
 
--> DONE
+-> child_song
+
+=== child_song ===
+// call song minigame here
+~ essence_child = true
+
+-> witch_day_seven
+
+=== witch_day_seven ===
+# location: beach
+
+I've brought you a trinket.
+// add new trinket
+~ trinket_day_seven = true
+// call new witch song
+~ song_surprise = true
+
+Placeholder for witch song words.
+
+->->

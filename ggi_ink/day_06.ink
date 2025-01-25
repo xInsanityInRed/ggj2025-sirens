@@ -45,4 +45,23 @@ Dialogue here. # villageelder
 = villageelder_04
 Dialogue here. # villageelder
 
--> DONE
+-> elder_song
+
+=== elder_song ===
+// call song minigame here
+~ essence_elder = true
+
+-> witch_day_six
+
+=== witch_day_six ===
+# location: beach
+
+I've brought you a trinket.
+// add new trinket
+~ trinket_day_six = true
+// call new witch song
+~ song_boredom = true
+
+Placeholder for witch song.
+
+->->

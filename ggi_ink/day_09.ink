@@ -45,4 +45,22 @@ Dialogue here. # drunk
 = drunk_04
 Dialogue here. # drunk
 
--> DONE
+-> drunk_song
+
+=== drunk_song ===
+// call song minigame here
+~ essence_drunk = true
+
+-> witch_day_nine
+
+=== witch_day_nine ===
+# location: beach
+
+I've brought you a trinket.
+// add new trinket
+~ trinket_day_nine = true
+// reprise song of hope
+
+
+
+->->

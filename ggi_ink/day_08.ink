@@ -45,4 +45,23 @@ Dialogue here. # himbo
 = himbo_04
 Dialogue here. # himbo
 
--> DONE
+-> child_song
+
+=== himbo_song ===
+// call song minigame here
+~ essence_himbo = true
+
+-> witch_day_eight
+
+=== witch_day_eight ===
+# location: beach
+
+I've brought you a trinket.
+// add new trinket
+~ trinket_day_eight = true
+// call new witch song
+~ song_surprise = true
+
+Placeholder for witch song words.
+
+->->

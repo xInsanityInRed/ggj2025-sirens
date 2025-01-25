@@ -45,8 +45,23 @@ Dialogue here. # fisherman
 = fisherman_04
 Dialogue here. # fisherman
 
--> DONE
+-> fisherman_song
 
+=== fisherman_song ===
+// call song minigame here
+~ essence_loremaster = true
 
+-> witch_day_five
+
+=== witch_day_five ===
+# location: beach
+
+I've brought you a trinket.
+// add new trinket
+~ trinket_day_five = true
+// call new witch song
+~ song_anger = true
+
+Placeholder for witch song.
 
 ->->
