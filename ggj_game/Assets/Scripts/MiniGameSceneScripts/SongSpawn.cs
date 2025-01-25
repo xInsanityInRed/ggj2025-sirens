@@ -4,7 +4,7 @@ using UnityEngine.Assertions.Must;
 public class SongSpawn : MonoBehaviour
 {
 
-    public string songNotes = "cab";
+    public string songNotes = "cabd";
 
     public bool complete = false;
 
@@ -24,6 +24,7 @@ public class SongSpawn : MonoBehaviour
     {
         // Create note objects for song
         noteObjects = new GameObject[songNotes.Length];
+        Debug.Log("Length: " + songNotes.Length);
 
         for( int i=0 ; i<songNotes.Length ; i++) {
             noteObjects[i] = Instantiate(noteReference);
@@ -57,8 +58,11 @@ public class SongSpawn : MonoBehaviour
         else if(note == 'a') {
             return KeyCode.S;
         }
-        else {
+        else if (note == 'b') {
             return KeyCode.D;
+        }
+        else {
+            return KeyCode.Q;
         }
     }
 

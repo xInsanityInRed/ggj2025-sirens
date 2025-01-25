@@ -27,7 +27,7 @@ public class GameplayCamera : MonoBehaviour
     public void moveCamera()
     {
         UnityEngine.Vector3 newPosition = new UnityEngine.Vector3();
-        newPosition.x = 22.5f;
+        newPosition.x = 19.5f;
         newPosition.y = 0;
         newPosition.z = -10f;
 

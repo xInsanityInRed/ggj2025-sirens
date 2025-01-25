@@ -11,7 +11,7 @@ TagManager:
   - background
   - Water
   - UI
-  - 
+  - DialogBoxes
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: background
     uniqueID: 1837100719
+    locked: 0
+  - name: DialogBoxes
+    uniqueID: 521287335
     locked: 0
   - name: Default
     uniqueID: 0
