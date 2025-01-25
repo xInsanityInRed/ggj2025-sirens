@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{64fbe6e8-5155-40f7-a779-3aabe6584d89}">
+		<property name="assetPath">
+			<value>Ambience/SDUCK_ambience.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>52</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6236a8f0-74c9-4493-b43e-21c74f6023b0}</destination>
+		</relationship>
+	</object>
+</objects>
