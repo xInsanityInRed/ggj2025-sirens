@@ -7,7 +7,7 @@ VAR trinket_one = false
 
 === loremaster ===
 # location: beach
-It's all beautiful, isn't it? Our home. Our people. # loremaster
+It's all beautiful, isn't it? <em>Our</em> home. Our people. # loremaster
 * [Stare at him] #siren
     ... #siren
     -> loremaster_01
@@ -66,5 +66,8 @@ I've brought you a trinket.
 ~ song_disgust = true
 
 Placeholder for witch song lyrics.
+
+=== testingKnot ===
+This is a test knot. # testing
 
 -> END

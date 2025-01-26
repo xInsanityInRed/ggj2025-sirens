@@ -18,6 +18,7 @@ public class DialogScript : MonoBehaviour
     void Start()
     {
         story = new Story(inkJSON.text);
+        story.ChoosePathString("testingKnot");
 
         refreshUI();
 
