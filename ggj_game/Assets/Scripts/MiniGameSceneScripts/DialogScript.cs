@@ -19,6 +19,8 @@ public class DialogScript : MonoBehaviour
 
     public Button continueButtonPrefab;
 
+    private bool minigame = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -48,7 +50,8 @@ public class DialogScript : MonoBehaviour
             }
             else if (tags.Count == 2) {
                 if(tags[1] == "minigame") {
-                    spawnSong();
+                    // spawnSong();
+                    minigame = true;
                 }
             }
         }
@@ -91,7 +94,14 @@ public class DialogScript : MonoBehaviour
         continueButton.transform.SetParent(dialogContainer, false);
 
         continueButton.onClick.AddListener(delegate{
-            refreshUI();
+            if (!minigame) {
+                refreshUI();
+            }
+            else if (minigame) {
+                minigame = false;
+                spawnSong();
+                refreshUI();
+            }
         });
     }
 
