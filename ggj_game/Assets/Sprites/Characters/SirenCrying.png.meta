@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SirenCrying_0: -6708017878183249359
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

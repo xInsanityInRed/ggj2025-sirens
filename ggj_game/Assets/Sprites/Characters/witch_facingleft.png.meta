@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      witch_facingleft_0: 2909761845494011343
+      witch_facingleft_1: 7481829109219912027
+      witch_facingleft_2: 3718318999317299897
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

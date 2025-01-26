@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Day1_SirenOnRockNoShip_0: 5203281063915852858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

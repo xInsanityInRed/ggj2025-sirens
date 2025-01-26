@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sirencave_v3_0: -5486435804156028037
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
