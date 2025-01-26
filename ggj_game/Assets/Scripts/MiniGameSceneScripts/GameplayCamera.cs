@@ -9,6 +9,8 @@ public class GameplayCamera : MonoBehaviour
 
     public bool moveEnabled = false;
 
+    public bool moveFinished = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,6 +39,7 @@ public class GameplayCamera : MonoBehaviour
 
         if(UnityEngine.Vector3.Distance(transform.position, newPosition) < 0.01f){
             moveEnabled = false;
+            moveFinished = true;
         }
     }
 }
