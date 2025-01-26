@@ -1,11 +1,14 @@
 using System.Collections.Generic;
 using Ink.Runtime;
 using Unity.Mathematics;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogScript : MonoBehaviour
 {
+    [SerializeField]
+    private SceneController controllerReference;
 
     public TextAsset inkJSON;
     private Story story;
@@ -14,10 +17,13 @@ public class DialogScript : MonoBehaviour
     public Text namePrefab;
     public Button buttonPrefab;
 
+    public Button continueButtonPrefab;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         story = new Story(inkJSON.text);
+        story.ChoosePathString("loremaster");
 
         refreshUI();
 
@@ -31,16 +37,19 @@ public class DialogScript : MonoBehaviour
         Text storyText = Instantiate(textPrefab);
         Text nameText = Instantiate(namePrefab);
 
-        storyText.text = loadStoryChunk();
+        // storyText.text = loadStoryChunk();
+        storyText.text = loadStoryText();
         //get current tags
         List<string> tags = story.currentTags;
 
         if(tags.Count > 0) {
-            if (tags.Count > 1) {
-                nameText.text = tags[1];
-            }
-            else {
+            if (tags.Count == 1) {
                 nameText.text = tags[0];
+            }
+            else if (tags.Count == 2) {
+                if(tags[1] == "minigame") {
+                    spawnSong();
+                }
             }
         }
         // get dialog container
@@ -49,6 +58,45 @@ public class DialogScript : MonoBehaviour
         storyText.transform.SetParent(dialogContainer, false);
         nameText.transform.SetParent(dialogContainer, false);
 
+        if(story.currentChoices.Count == 0) {
+            createContinueButton();
+        }
+        else {
+            createChoiceButtons();
+        }
+
+        // // get choices
+        // foreach (Choice choice in story.currentChoices) {
+        //     Button choiceButton = Instantiate(buttonPrefab);
+        //     Text choiceText = choiceButton.GetComponentInChildren<Text>();
+        //     choiceText.text = choice.text;
+            
+        //     // get choice canvas
+        //     Transform choiceContainer = transform.Find("ChoiceCanvas");
+
+        //     // set parent
+        //     choiceButton.transform.SetParent(choiceContainer, false);
+
+        //     // onClick
+        //     choiceButton.onClick.AddListener(delegate {
+        //         chooseChoice(choice);
+        //     });
+        // }
+    }
+
+    void createContinueButton()
+    {
+        Button continueButton = Instantiate(continueButtonPrefab);
+        Transform dialogContainer = transform.Find("DialogContainer"); 
+        continueButton.transform.SetParent(dialogContainer, false);
+
+        continueButton.onClick.AddListener(delegate{
+            refreshUI();
+        });
+    }
+
+    void createChoiceButtons()
+    {
         // get choices
         foreach (Choice choice in story.currentChoices) {
             Button choiceButton = Instantiate(buttonPrefab);
@@ -66,6 +114,14 @@ public class DialogScript : MonoBehaviour
                 chooseChoice(choice);
             });
         }
+    }
+
+    void spawnSong()
+    {
+        // eraseUI();
+        SceneController controller = controllerReference.GetComponent<SceneController>();
+        controller.secondSong = true;
+        // refreshUI();
     }
 
     void eraseUI()
@@ -102,6 +158,17 @@ public class DialogScript : MonoBehaviour
 
         if (story.canContinue) {
             text = story.ContinueMaximally();
+        }
+
+        return text;
+    }
+
+    string loadStoryText()
+    {
+        string text = "";
+
+        if (story.canContinue) {
+            text = story.Continue();
         }
 
         return text;
