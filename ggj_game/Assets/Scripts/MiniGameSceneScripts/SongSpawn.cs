@@ -35,7 +35,6 @@ public class SongSpawn : MonoBehaviour
 
         // Create note objects for song
         noteObjects = new GameObject[songNotes.Length];
-        Debug.Log("Length: " + songNotes.Length);
 
         for( int i=0 ; i<songNotes.Length ; i++) {
             noteObjects[i] = Instantiate(noteReference);
@@ -48,6 +47,12 @@ public class SongSpawn : MonoBehaviour
             noteObject.note = noteName;
             noteObject.keybind = key;
             noteObject.transform.position = positions[i].position;
+
+            noteObject.transform.SetParent(container.transform, true);
+
+            // Offset y depending on note value
+            
+            // X axis - move spawner to beginning of notes. for each note add i * gap to x position
         }
 
         // Initate first note as active
