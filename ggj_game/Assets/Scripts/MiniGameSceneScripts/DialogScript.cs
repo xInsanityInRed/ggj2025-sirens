@@ -14,6 +14,8 @@ public class DialogScript : MonoBehaviour
     public Text namePrefab;
     public Button buttonPrefab;
 
+    public Button continueButtonPrefab;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,7 +34,8 @@ public class DialogScript : MonoBehaviour
         Text storyText = Instantiate(textPrefab);
         Text nameText = Instantiate(namePrefab);
 
-        storyText.text = loadStoryChunk();
+        // storyText.text = loadStoryChunk();
+        storyText.text = loadStoryText();
         //get current tags
         List<string> tags = story.currentTags;
 
@@ -49,6 +52,13 @@ public class DialogScript : MonoBehaviour
 
         storyText.transform.SetParent(dialogContainer, false);
         nameText.transform.SetParent(dialogContainer, false);
+
+        if(story.currentChoices.Count == 0) {
+            createContinueButton();
+        }
+        else {
+
+        }
 
         // get choices
         foreach (Choice choice in story.currentChoices) {
@@ -68,6 +78,15 @@ public class DialogScript : MonoBehaviour
             });
         }
     }
+
+    void createContinueButton()
+    {
+        Button continueButton = Instantiate(continueButtonPrefab);
+        Transform dialogContainer = transform.Find("DialogContainer"); 
+        continueButton.transform.SetParent(dialogContainer, false);
+    }
+
+    
 
     void eraseUI()
     {
@@ -103,6 +122,17 @@ public class DialogScript : MonoBehaviour
 
         if (story.canContinue) {
             text = story.ContinueMaximally();
+        }
+
+        return text;
+    }
+
+    string loadStoryText()
+    {
+        string text = "";
+
+        if (story.canContinue) {
+            text = story.Continue();
         }
 
         return text;
