@@ -997,7 +997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1977155294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1094,7 +1094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8e71cefa10dee65ba55e460c2abd6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: 0e5e07a13cb7389489d7a95742843cb7, type: 3}
+  inkJSON: {fileID: 4900000, guid: 00c3597b44752189eab6e34fc86a6d4a, type: 3}
   textPrefab: {fileID: 7609412116578494508, guid: a6e1ad8551f6b3e46ac8be9489cb4c96, type: 3}
   namePrefab: {fileID: 4315556088854308611, guid: 45288d646edfda5e58b02274437973f4, type: 3}
   buttonPrefab: {fileID: 2889075453207110006, guid: cca70b610a3bcf10e9426d46f318faf8, type: 3}

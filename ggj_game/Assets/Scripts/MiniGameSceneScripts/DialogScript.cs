@@ -20,7 +20,7 @@ public class DialogScript : MonoBehaviour
     void Start()
     {
         story = new Story(inkJSON.text);
-        story.ChoosePathString("testingKnot");
+        story.ChoosePathString("loremaster");
 
         refreshUI();
 
@@ -57,9 +57,41 @@ public class DialogScript : MonoBehaviour
             createContinueButton();
         }
         else {
-
+            createChoiceButtons();
         }
 
+        // // get choices
+        // foreach (Choice choice in story.currentChoices) {
+        //     Button choiceButton = Instantiate(buttonPrefab);
+        //     Text choiceText = choiceButton.GetComponentInChildren<Text>();
+        //     choiceText.text = choice.text;
+            
+        //     // get choice canvas
+        //     Transform choiceContainer = transform.Find("ChoiceCanvas");
+
+        //     // set parent
+        //     choiceButton.transform.SetParent(choiceContainer, false);
+
+        //     // onClick
+        //     choiceButton.onClick.AddListener(delegate {
+        //         chooseChoice(choice);
+        //     });
+        // }
+    }
+
+    void createContinueButton()
+    {
+        Button continueButton = Instantiate(continueButtonPrefab);
+        Transform dialogContainer = transform.Find("DialogContainer"); 
+        continueButton.transform.SetParent(dialogContainer, false);
+
+        continueButton.onClick.AddListener(delegate{
+            refreshUI();
+        });
+    }
+
+    void createChoiceButtons()
+    {
         // get choices
         foreach (Choice choice in story.currentChoices) {
             Button choiceButton = Instantiate(buttonPrefab);
@@ -78,15 +110,6 @@ public class DialogScript : MonoBehaviour
             });
         }
     }
-
-    void createContinueButton()
-    {
-        Button continueButton = Instantiate(continueButtonPrefab);
-        Transform dialogContainer = transform.Find("DialogContainer"); 
-        continueButton.transform.SetParent(dialogContainer, false);
-    }
-
-    
 
     void eraseUI()
     {
