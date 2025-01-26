@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class SceneController : MonoBehaviour
 {
+    public GameState state;
+
     [SerializeField]
     private GameObject songSpawnerReference;
 
@@ -17,6 +19,9 @@ public class SceneController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+        Debug.Log(state.numDays);
+
         StartCoroutine(startEvents());
     }
 

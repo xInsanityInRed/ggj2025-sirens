@@ -1,3 +1,5 @@
+using System;
+using System.Data;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,11 +20,18 @@ public class TitleUI : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Set up play button
         Button playButton = playButtonReference.GetComponent<Button>();
         GameController gameController = gameControllerReference.GetComponent<GameController>();
 
         playButton.onClick.AddListener(delegate {
             gameController.startGame();
+        });
+
+        // Set up exit game
+        Button exitButton = exitButtonReference.GetComponent<Button>();
+        exitButton.onClick.AddListener(delegate {
+            gameController.quitGame();
         });
     }
 
@@ -30,7 +39,5 @@ public class TitleUI : MonoBehaviour
     void Update()
     {
         
-    }
-
-   
+    } 
 }

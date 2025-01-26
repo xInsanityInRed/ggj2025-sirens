@@ -1081,6 +1081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 748613daad42081e398ca246703be7da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: {fileID: 11400000, guid: f05ad6b04dc98e897b8413e669d45e58, type: 2}
   songSpawnerReference: {fileID: 1078245044}
   cameraReference: {fileID: 519420028}
   dialogCanvasReference: {fileID: 1977155293}
