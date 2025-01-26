@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllerReference: {fileID: 2068783594}
-  inkJSON: {fileID: 4900000, guid: 00c3597b44752189eab6e34fc86a6d4a, type: 3}
+  inkJSON: {fileID: 4900000, guid: 5d8e1c5d2b7968078a0ebb90426027f3, type: 3}
   textPrefab: {fileID: 7609412116578494508, guid: a6e1ad8551f6b3e46ac8be9489cb4c96, type: 3}
   namePrefab: {fileID: 4315556088854308611, guid: 45288d646edfda5e58b02274437973f4, type: 3}
   buttonPrefab: {fileID: 2889075453207110006, guid: cca70b610a3bcf10e9426d46f318faf8, type: 3}
