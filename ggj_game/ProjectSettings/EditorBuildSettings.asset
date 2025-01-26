@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiniGameScene.unity
     guid: b49ba2fd667ad784b9f07e91af5a924c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GrottoScene.unity
     guid: 834fc359cafc9304aad0fce97c544400
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PauseMenuScene.unity
     guid: bf92f15ea3430db4b865ab16a9d37091
   - enabled: 0
