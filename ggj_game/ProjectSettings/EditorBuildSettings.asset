@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MusicGame.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/MainMenuScene.unity
+    guid: 522c2c07aad1e66408cfebc6496c5cd2
+  - enabled: 1
+    path: Assets/Scenes/MiniGameScene.unity
+    guid: b49ba2fd667ad784b9f07e91af5a924c
+  - enabled: 1
+    path: Assets/Scenes/GrottoScene.unity
+    guid: 834fc359cafc9304aad0fce97c544400
+  - enabled: 1
+    path: Assets/Scenes/PauseMenuScene.unity
+    guid: bf92f15ea3430db4b865ab16a9d37091
+  - enabled: 0
+    path: Assets/Scenes/FinalScene.unity
+    guid: 43950ba934bbcb241aadaf79774bf1b9
+  - enabled: 0
+    path: Assets/Scenes/Cutscene.unity
+    guid: 3eb8a017ed74c734b9ec430f0b9f9756
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
