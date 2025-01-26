@@ -1,11 +1,14 @@
 using System.Collections.Generic;
 using Ink.Runtime;
 using Unity.Mathematics;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogScript : MonoBehaviour
 {
+    [SerializeField]
+    private SceneController controllerReference;
 
     public TextAsset inkJSON;
     private Story story;
@@ -40,11 +43,13 @@ public class DialogScript : MonoBehaviour
         List<string> tags = story.currentTags;
 
         if(tags.Count > 0) {
-            if (tags.Count > 1) {
-                nameText.text = tags[1];
-            }
-            else {
+            if (tags.Count == 1) {
                 nameText.text = tags[0];
+            }
+            else if (tags.Count == 2) {
+                if(tags[1] == "minigame") {
+                    spawnSong();
+                }
             }
         }
         // get dialog container
@@ -109,6 +114,14 @@ public class DialogScript : MonoBehaviour
                 chooseChoice(choice);
             });
         }
+    }
+
+    void spawnSong()
+    {
+        // eraseUI();
+        SceneController controller = controllerReference.GetComponent<SceneController>();
+        controller.secondSong = true;
+        // refreshUI();
     }
 
     void eraseUI()

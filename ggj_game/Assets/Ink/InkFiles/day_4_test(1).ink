@@ -108,7 +108,7 @@ You feel it welling back up from deep within you. Opening your mouth, the song p
 -> loremaster_afraid
 
 = loremaster_afraid
-"Wait, what are you-" # loremaster
+"Wait, what are you-" # loremaster # minigame
 // call song minigame here
 ~ essence_loremaster = true
 

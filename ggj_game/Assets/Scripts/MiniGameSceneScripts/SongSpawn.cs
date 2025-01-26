@@ -48,6 +48,8 @@ public class SongSpawn : MonoBehaviour
             noteObject.keybind = key;
             noteObject.transform.position = positions[i].position;
 
+            noteObject.transform.SetParent(container.transform, true);
+
             // Offset y depending on note value
             
             // X axis - move spawner to beginning of notes. for each note add i * gap to x position
