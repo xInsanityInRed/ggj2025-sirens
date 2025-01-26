@@ -12,7 +12,7 @@ INCLUDE day_10.ink
 
 
 -> day_03_main ->
--> day_04_main ->
+-> loremaster ->
 -> day_05_main ->
 -> day_06_main ->
 -> day_07_main ->

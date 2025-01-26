@@ -6,7 +6,6 @@ VAR essence_child = false
 VAR essence_himbo = false
 VAR essence_drunk = false
 
-
 // Which songs has the siren learned?
 VAR song_shipwrecking = true
 VAR song_hope = false
@@ -24,3 +23,7 @@ VAR trinket_day_six = false
 VAR trinket_day_seven = false
 VAR trinket_day_eight = false
 VAR trinket_day_nine = false
+
+// Loremaster story variables
+VAR teeth_done = false
+VAR away_done = false

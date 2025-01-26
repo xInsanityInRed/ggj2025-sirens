@@ -4,41 +4,41 @@
 
 === fisherman ===
 # location: beach
-Dialogue here. # fisherman
-* [Stare at him]
+Hmph. What a vile creature you are. # fisherman
+* [Growl at him]  # siren
     ... # siren
     -> fisherman_01
-* [Growl at him]
+* [His at him]  # siren
     ... # siren
     -> fisherman_01
 
 = fisherman_01
 Dialogue here. # fisherman
 
-* [Stare at him]
+* [Stare at him]  # siren
     ... # siren
     -> fisherman_02
-* [Growl at him]
+* [Growl at him]  # siren
     ... # siren
     -> fisherman_02
     
 = fisherman_02
 Dialogue here. # fisherman
 
-* [Stare at him]
+* [Stare at him]  # siren
     ... # siren
     -> fisherman_03
-* [Growl at him]
+* [Growl at him]  # siren
     ... # siren
     -> fisherman_03
 
 = fisherman_03
 Dialogue here. # fisherman
 
-* [Stare at him]
+* [Stare at him]  # siren
     ... # siren
     -> fisherman_04
-* [Growl at him]
+* [Growl at him]  # siren
     ... # siren
     -> fisherman_04
     
