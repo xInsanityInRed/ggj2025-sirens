@@ -352,6 +352,7 @@ MonoBehaviour:
   - {fileID: 808271877}
   - {fileID: 1644683739}
   - {fileID: 1250844107}
+  SongGameReference: {fileID: 0}
   song: []
 --- !u!1 &423405267 stripped
 GameObject:
@@ -807,6 +808,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 415076156}
     m_Modifications:
+    - target: {fileID: 656064262246813669, guid: da61f37f994f46fd4a30fea49fb07854, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d1bdc9df2cee7a6c7b5a572f9a61e95f, type: 2}
     - target: {fileID: 800572429716740804, guid: da61f37f994f46fd4a30fea49fb07854, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
