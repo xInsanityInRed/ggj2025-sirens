@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class NoteSpawn : MonoBehaviour
@@ -66,8 +67,11 @@ public class NoteSpawn : MonoBehaviour
             // Get note object
             Note noteObject = notes[i].GetComponent<Note>();
 
+            if(noteObject.incorrect) {
+                resetNotes();
+            }
             // Check if note is completed
-            if(!noteObject.active) { // note is not active
+            else if(!noteObject.active) { // note is not active
 
                 if(noteObject.complete) { // note is complete
                     
@@ -91,5 +95,17 @@ public class NoteSpawn : MonoBehaviour
         if( lastNote.complete ) {
             SongGameReference.GetComponent<SongGame>().complete = true;
         }
+    }
+
+    private void resetNotes()
+    {
+        for(int i=0 ; i<song.Length ; i++) {
+            Note noteObject = notes[i].GetComponent<Note>();
+
+            noteObject.resetNote();
+        }
+
+        // Set first note active
+        notes[0].GetComponent<Note>().active = true;
     }
 }

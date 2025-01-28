@@ -9,6 +9,8 @@ public class Note : MonoBehaviour
 
     public bool complete = false;
 
+    public bool incorrect = true;
+
     [SerializeField]
     private RuntimeAnimatorController A_Controller;
 
@@ -34,13 +36,17 @@ public class Note : MonoBehaviour
         transform.localPosition = currentPosition;
     }
 
+    private void Awake()
+    {
+        anim = gameObject.GetComponent<Animator>();
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // active = true;
         // rend = GetComponent<Renderer>();
-        anim = gameObject.GetComponent<Animator>();
+        // anim = gameObject.GetComponent<Animator>();
 
         // Choose correct animations
         switch (keybind) {
@@ -59,14 +65,35 @@ public class Note : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (active && Input.GetKeyDown(keybind)) {
-            // rend.material.color = Color.red;
-            anim.SetBool("Pressed", true);
-            complete = true;
-            active = false;
+        // if (active && Input.GetKeyDown(keybind)) {
+        //     // rend.material.color = Color.red;
+        //     anim.SetBool("Pressed", true);
+        //     complete = true;
+        //     active = false;
+        // }
+        // check if incorrect keybind
+
+        // Check keypress
+        if(active && Input.anyKeyDown) {
+            // Check if correct keypress
+            if(Input.GetKeyDown(keybind)) {
+                anim.SetBool("Pressed", true);
+                complete = true;
+                active = false;
+            }
+            else {
+                incorrect = true;
+            }
         }
+
     }
 
-    
+    public void resetNote()
+    {
+        active = false;
+        complete = false;
+        incorrect = false;
+        this.anim.SetBool("Pressed", false);
+    }
 
 } // class
