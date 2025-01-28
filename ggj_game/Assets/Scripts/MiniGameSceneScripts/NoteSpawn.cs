@@ -31,13 +31,15 @@ public class NoteSpawn : MonoBehaviour
 
             // Get y position for the note
             float y = state.noteVertPosition[song[i]];
-            Debug.Log("Note " + i + " y: " + y);
 
             note.Initialize(song[i], key, y);
 
             notes[i].SetActive(true);
             
         }
+
+        // Set first note as active
+        notes[0].GetComponent<Note>().active = true;
     }
 
     private KeyCode getKey(string noteName)
@@ -50,6 +52,44 @@ public class NoteSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        checkActive();
+    }
+
+    // Check active states for notes
+    private void checkActive()
+    {
+        bool prevNoteComplete = false;
+        int prevComplete = -1;
+
+        for( int i=0 ; i<song.Length ; i++) {
+            
+            // Get note object
+            Note noteObject = notes[i].GetComponent<Note>();
+
+            // Check if note is completed
+            if(!noteObject.active) { // note is not active
+
+                if(noteObject.complete) { // note is complete
+                    
+                    prevNoteComplete = true;
+                    prevComplete = i;
+                    continue;
+                }
+                else { // note is not complete
+                    
+                    if(prevNoteComplete && prevComplete == i-1) {
+
+                        noteObject.active = true;
+                        return;
+                    }
+                }
+            }
+        }
+
+        // Check if last note is now complete
+        Note lastNote = notes[notes.Length-1].GetComponent<Note>();
+        if( lastNote.complete ) {
+            SongGameReference.GetComponent<SongGame>().complete = true;
+        }
     }
 }

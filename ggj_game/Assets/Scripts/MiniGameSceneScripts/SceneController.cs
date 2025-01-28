@@ -32,8 +32,6 @@ public class SceneController : MonoBehaviour
 
         song = new string[] {"C#", "G#", "G#", "G#", "G#", "C#", "C#", "C#"};
 
-        Debug.Log(state.numDays);
-
         StartCoroutine(startEvents());
     }
 
@@ -51,6 +49,9 @@ public class SceneController : MonoBehaviour
         // Wait until song one is completed
         yield return new WaitUntil(() => gameOne.complete);
         
+        // Pan camera
+        GameplayCamera camera = cameraReference.GetComponent<GameplayCamera>();
+        camera.moveEnabled = true;
 
     }
 
@@ -73,9 +74,9 @@ public class SceneController : MonoBehaviour
     //     // wait until song is complete
     //     yield return new WaitUntil(() => spawner.complete);
 
-    //     // Pan camera
-    //     GameplayCamera camera = cameraReference.GetComponent<GameplayCamera>();
-    //     camera.moveEnabled = true;
+        // Pan camera
+        // GameplayCamera camera = cameraReference.GetComponent<GameplayCamera>();
+        // camera.moveEnabled = true;
 
     //     // wait until move is finished
     //     yield return new WaitUntil(() => camera.moveFinished);
