@@ -1,32 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7558982933956241655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Test_Ambience
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Test_Ambience
-  Guid:
-    Data1: -1757473323
-    Data2: 1097382911
-    Data3: -638964805
-    Data4: 1317372595
-  Banks:
-  - {fileID: 8699812449104627804}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 52000
 --- !u!114 &-7317872899769743546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,6 +27,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3673
+--- !u!114 &-4235136697914941191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Songs/Hope_Siren
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Songs/Hope_Siren
+  Guid:
+    Data1: -1140804367
+    Data2: 1287679013
+    Data3: 1268867760
+    Data4: 1783211925
+  Banks:
+  - {fileID: 8699812449104627804}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11020
+--- !u!114 &-3100645066707011245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/Click
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/Click
+  Guid:
+    Data1: -424325878
+    Data2: 1200261506
+    Data3: -726619494
+    Data4: -2066156008
+  Banks:
+  - {fileID: 8699812449104627804}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 300
 --- !u!114 &-2561114637263114041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +135,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3673
+--- !u!114 &-1001977440409206306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Songs/Hope_Witch
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Songs/Hope_Witch
+  Guid:
+    Data1: -1817761031
+    Data2: 1171346989
+    Data3: -94886505
+    Data4: -542905182
+  Banks:
+  - {fileID: 8699812449104627804}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 9183
 --- !u!114 &-431482886987494847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,9 +205,6 @@ MonoBehaviour:
   - {fileID: 8750837771489130291}
   - {fileID: 8699812449104627804}
   EditorEvents:
-  - {fileID: -7558982933956241655}
-  - {fileID: 4671507019235768596}
-  - {fileID: 4579056622715509526}
   - {fileID: 7966719901165313958}
   - {fileID: 3043752657957837069}
   - {fileID: 8289144519908072751}
@@ -166,14 +217,16 @@ MonoBehaviour:
   - {fileID: -431482886987494847}
   - {fileID: -7317872899769743546}
   - {fileID: 6991227824156585027}
-  - {fileID: 5945270014396626017}
-  - {fileID: 4321654698945138307}
+  - {fileID: -3100645066707011245}
+  - {fileID: 5672791539115551470}
+  - {fileID: -4235136697914941191}
+  - {fileID: -1001977440409206306}
   EditorParameters: []
   MasterBanks:
   - {fileID: 8699812449104627804}
   StringsBanks:
   - {fileID: 8750837771489130291}
-  cacheTime: 638735080170576749
+  cacheTime: 638736821536401270
   cacheVersion: 131622
 --- !u!114 &1150260962330834408
 MonoBehaviour:
@@ -196,7 +249,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 8699812449104627804}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
@@ -256,87 +309,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3673
---- !u!114 &4321654698945138307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Hope_Song_Witch
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Hope_Song_Witch
-  Guid:
-    Data1: -1817761031
-    Data2: 1171346989
-    Data3: -94886505
-    Data4: -542905182
-  Banks:
-  - {fileID: 8699812449104627804}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 9183
---- !u!114 &4579056622715509526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Click
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Click
-  Guid:
-    Data1: -424325878
-    Data2: 1200261506
-    Data3: -726619494
-    Data4: -2066156008
-  Banks:
-  - {fileID: 8699812449104627804}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 692
---- !u!114 &4671507019235768596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Test_Music
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Test_Music
-  Guid:
-    Data1: -1296656402
-    Data2: 1334368529
-    Data3: 1150672564
-    Data4: 159975746
-  Banks:
-  - {fileID: 8699812449104627804}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 72000
 --- !u!114 &5505445453469608305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,6 +336,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 16530
+--- !u!114 &5672791539115551470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Songs/Pride_Circe
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Songs/Pride_Circe
+  Guid:
+    Data1: -2142519180
+    Data2: 1319229210
+    Data3: -143470919
+    Data4: -1935916643
+  Banks:
+  - {fileID: 8699812449104627804}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 27551
 --- !u!114 &5908355382487712093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,33 +390,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 332
---- !u!114 &5945270014396626017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Hope_Song_Siren
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Hope_Song_Siren
-  Guid:
-    Data1: -1140804367
-    Data2: 1287679013
-    Data3: 1268867760
-    Data4: 1783211925
-  Banks:
-  - {fileID: 8699812449104627804}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 9183
 --- !u!114 &6991227824156585027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,7 +486,7 @@ MonoBehaviour:
   Path: Assets/Audio/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638735080170527488
+  lastModified: 638736821536355956
   FileSizes: []
   Exists: 1
 --- !u!114 &8750837771489130291
@@ -532,8 +504,8 @@ MonoBehaviour:
   Path: Assets/Audio/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638735080170576749
+  lastModified: 638736821536401270
   FileSizes:
   - Name: 
-    Value: 1574
+    Value: 1740
   Exists: 1
